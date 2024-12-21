@@ -14,6 +14,7 @@ renamed as (
         party_full,
         candidate_id,
         committee_ids,
+        split_part(candidate_name, ',', 1) as first_name,
         candidate_name,
         cast(total_receipts as float) as total_receipts,
         candidate_pcc_id,
