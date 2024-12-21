@@ -7,7 +7,6 @@ source as (
 ),
 
 renamed as (
-
     select
 
         office,
@@ -27,5 +26,4 @@ renamed as (
     from source
 
 )
-
 select * from renamed
