@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: elections
+    database: airbyte_raw
+    schema: google_sheets
+    tables:
+      - name: candidates
+      - name: communication_costs
+      - name: independent_expenditures
