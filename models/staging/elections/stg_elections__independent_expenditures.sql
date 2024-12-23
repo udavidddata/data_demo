@@ -20,7 +20,6 @@ renamed as (
         committee_name as cmt_name,
         support_oppose_indicator
     from source
-
 )
-
-select * from renamed
+select * 
+from renamed
