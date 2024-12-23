@@ -8,7 +8,6 @@ source as (
 
 renamed as (
     select
-
         office,
         party_full,
         candidate_id,
@@ -22,7 +21,6 @@ renamed as (
         candidate_election_year,
         cast(cash_on_hand_end_period as float) as cash_on_hand_end_period,
         incumbent_challenge_full
-
     from source
 
 )
