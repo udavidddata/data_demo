@@ -9,7 +9,6 @@ source as (
 renamed as (
 
     select
-
         count,
         cycle,
         cast(total as float) as total,
@@ -18,11 +17,9 @@ renamed as (
         candidate_id,
         committee_id,
         candidate_name,
-        committee_name,
+        committee_name as cmt_name,
         support_oppose_indicator
-
     from source
-
 )
-
-select * from renamed
+select * 
+from renamed
