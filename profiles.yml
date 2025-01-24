@@ -10,6 +10,14 @@ data_demo:
       type: snowflake
       user: "{{ env_var('SNOWFLAKE_USER') }}" 
       warehouse: COMPUTE_WH
-      #private_key: "{{ env_var('SNOWFLAKE_PRIVATE_KEY') }}" 
+      private_key:[-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw9stUbi4gWwdeX8SqOsb
+1Gs8v7vz3jzbZ9I3U2NVjr6OFsxjAYWN+UGqUzWHUtQsI4ZcxJDkFrYpjKuR4Ybr
+Jm4tGT64nZ3ASsx6piS6sxCXbJeL4pj5NykTh0yXr+TwZClCaB3OFvEvkM7UcQh3
+6cJMgUaMdjwBy/ZAVCO5KFy1E1521uKsJHMusvYJJpQYzZwSFjnH5r2yMktJWDx/
+CdlG0c/WEjMO8g25nyjrMfLoNSlNW5FyzyA8NQg/nbn4qK2mlNDCy0trRF1ICyDy
+XlHkcCu7MNyjlt7+Oq5/GS/6fAfHRXDMLK1WJ2iN+fik1WyZUsQo/hHv4R8b2qMN
+jwIDAQAB
+-----END PUBLIC KEY-----]
       authenticator: "{{ env_var('AUTHENTICATOR') }}" 
   target: dev
