@@ -1,0 +1,14 @@
+data_demo:
+  outputs:
+    dev:
+      account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}" 
+      database: "{{ env_var('SNOWFLAKE_DB') }}" 
+      password: "{{ env_var('SNOWFLAKE_PW') }}" 
+      role: "{{ env_var('SNOWFLAKE_ROLE') }}"
+      schema: DBT_UDAVIDDDATA
+      threads: 6
+      type: snowflake
+      user: "{{ env_var('SNOWFLAKE_USER') }}" 
+      warehouse: COMPUTE_WH
+      authenticator: username_password_mfa
+  target: dev
