@@ -2,7 +2,7 @@ data_demo:
   outputs:
     dev:
       account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}" 
-      database: "{{ env_var('SNOWFLAKE_DB') }}" 
+      database: "{{ var('SNOWFLAKE_DB') }}" 
       password: "{{ env_var('SNOWFLAKE_PASSWORD') }}" 
       role: "{{ env_var('SNOWFLAKE_ROLE') }}"
       schema: DBT_UDAVIDDDATA
