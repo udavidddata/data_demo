@@ -1,6 +1,4 @@
-with 
-
-source as (
+with source as (
 
     select * from {{ source('elections', 'independent_expenditures') }}
 
@@ -21,5 +19,6 @@ renamed as (
         support_oppose_indicator
     from source
 )
-select * 
+
+select *
 from renamed
