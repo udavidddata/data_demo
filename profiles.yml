@@ -12,4 +12,5 @@ data_demo:
       warehouse: COMPUTE_WH
       private_key_path: "rsa_key.p8"
       private_key_passphrase: "{{ env_var('SNOWFLAKE_PRIVATE_KEY_PASSPHRASE') }}"
+      authenticator: username_password_mfa
   target: dev
