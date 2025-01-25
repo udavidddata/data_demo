@@ -10,33 +10,6 @@ data_demo:
       type: snowflake
       user: "{{ env_var('SNOWFLAKE_USER') }}" 
       warehouse: COMPUTE_WH
-      private_key:[-----BEGIN PRIVATE KEY-----
-MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDD2y1RuLiBbB15
-fxKo6xvUazy/u/PePNtn0jdTY1WOvo4WzGMBhY35QapTNYdS1CwjhlzEkOQWtimM
-q5Hhhusmbi0ZPridncBKzHqmJLqzEJdsl4vimPk3KROHTJev5PBkKUJoHc4W8S+Q
-ztRxCHfpwkyBRox2PAHL9kBUI7koXLUTXnbW4qwkcy6y9gkmlBjNnBIWOcfmvbIy
-S0lYPH8J2UbRz9YSMw7yDbmfKOsx8ug1KU1bkXLPIDw1CD+dufioraaU0MLLS2tE
-XUgLIPJeUeRwK7sw3KOW3v46rn8ZL/p8B8dFcMwsrVYnaI35+KTVbJlSxCj+Ee/h
-Hxvaow2PAgMBAAECggEAAPGg9chcnJm5803Gor7DUGeV5YdRL7cpCDE4qAkOA//s
-wl+zcxyYKGUwc3HfbZRChDH6Z3jFSKC8cYZFeontFIR/viPnEty27QVa6qBkWpw6
-sUDHtqIDGB4gDyJc3BxP1kO7+LF6vpyPR0o1NuLnZQkqgjhQpqSNDlUTo/QqHm+A
-biLfxivrhnvpKD1cQF4ZBbm0txLIIDnUhbboXErGSXELkOs3fkBWf2uG3A8hSo5I
-MSD+U0K+vnFhlBNvhWksmz8qArznUSM1pqxa0olarK2OJiuy0lEvd4IFw0yxsApo
-4H0ck/b9YO3gnoRcZScMGyh8kX2DOuHys4Uq4JWhQQKBgQD+sPuqxn+Lh5bnlP6W
-F2pa7uuoxwhAjU5RlYrqn8aN1ETTDLcnBgKHXgDavbbXCNZk+yNaZuPRD1tPBD8u
-9h9GHJuTGwY5c9cdpdAIfqo6E+TO7QlCsE7/1I0xgHzFBiwmFItTVo7NpI2o0HHG
-9Vg+dOdh8Ix2yqVYihMp3A5RTwKBgQDE3M2XvwoTuL3EfvLdDpweeBqkY3W5U8v8
-EUH/dCEs4UiGK/FO40Io8JGTKMhjlFC6SA7Eab8OE2zUO7dspFa7ZGeEFkwuQYxA
-NH/gqrdkpHtGGPDDVKSCo8wb5ooWbBjV+P1peBTqd/mtSkgKA1KDHspVzFWkpDeR
-Jso9CWHvwQKBgQCxMTp2DpGP5m5TgbI5g+Lnjs9/ZbFVD7pMQkkagLxn0iVr263U
-xXae7QSVKmX5ZtmZ+asX6vtWaGOzLpYyuuL5KVAHYUbMU852fvSj5FPUAiEu4XSO
-5BCiJiNxLB4iCPBQMfzYpyDE61Xu+84ciHazRSvxVKS0xLmSRsWcWs/POwKBgE/Z
-3E7b/6NmQRst/ybpYSv+vZfGfB7zPX9+JI4QtdA1hSxfMJ82EUT356SQW1AA/gnB
-ZrQGzKdR+8fOfSVFN6UFIfPy822jytbUNLaVqJPbH+GcBjTE5YHUHNuIVKSprh1E
-xM1+FsXQamb/BV+CX3quB5ZrrqV8ssleuZOudZpBAoGAA8yeZcAIwHvGWeo+0U2i
-ziwaNHB68nh7VHal2HnBgJ8h4YqkmcLdzV8m1nCF5nCfOlHVelvbsuNWaCA0Hvz9
-PDD/ZqskktTyhfGJsUMG/TD6ODh+8r46ycY8nZMJsyR5uN0MGwn5D+pD+DR1RDn0
-jJkEGWf3Lzla3llwsXIIMhM=
------END PRIVATE KEY-----]
-      authenticator: "{{ env_var('AUTHENTICATOR') }}" 
+      private_key: "{{ env_var('SNOWFLAKE_PRIVATE_KEY') }}" 
+      private_key_passphrase: "{{ env_var('SNOWFLAKE_PRIVATE_KEY_PASSPHRASE') }}"
   target: dev
