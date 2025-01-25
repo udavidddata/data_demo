@@ -36,8 +36,8 @@ jobs:
       - name: Setup Snowflake key
         run: |
           mkdir -p ~/.dbt
-          echo "${{ secrets.SNOWFLAKE_PRIVATE_KEY }}" > ~/.dbt/rsa_key.p8
-          chmod 600 ~/.dbt/rsa_key.p8
+          echo "${{ secrets.SNOWFLAKE_PRIVATE_KEY }}" > rsa_key.p8
+          chmod 600 rsa_key.p8
 
       - name: Install requirements
         run: pip install -r requirements.txt  
