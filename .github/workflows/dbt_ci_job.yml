@@ -33,11 +33,11 @@ jobs:
         with:
           python-version: '3.9.17'
       
-    - name: Setup Snowflake key
-      run: |
-        mkdir -p ~/.dbt
-        echo "${{ secrets.SNOWFLAKE_PRIVATE_KEY }}" > ~/.dbt/snowflake.key
-        chmod 600 ~/.dbt/snowflake.key
+      - name: Setup Snowflake key
+        run: |
+          mkdir -p ~/.dbt
+          echo "${{ secrets.SNOWFLAKE_PRIVATE_KEY }}" > ~/.dbt/snowflake.key
+          chmod 600 ~/.dbt/snowflake.key
 
       - name: Install requirements
         run: pip install -r requirements.txt  
