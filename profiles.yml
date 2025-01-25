@@ -10,7 +10,7 @@ data_demo222:
       type: snowflake
       user: "{{ env_var('SNOWFLAKE_USER') }}" 
       warehouse: COMPUTE_WH
-      private_key_path: ./rsa_key.p8
+      private_key:  "{{ env_var('SNOWFLAKE_PRIVATE_KEY') }}" 
       private_key_passphrase: "{{ env_var('SNOWFLAKE_PRIVATE_KEY_PASSPHRASE') }}"
       authenticator: username_password_mfa
   target: dev
@@ -28,7 +28,7 @@ data_demo:
       user: DAVIDDATA
       warehouse: COMPUTE_WH
       private_key: "{{ env_var('SNOWFLAKE_PRIVATE_KEY') }}" 
-      #private_key_path: ./rsa_key.p8
       authenticator: username_password_mfa
-      private_key_passphrase: Excel
+      private_key_passphrase: "{{ env_var('SNOWFLAKE_PRIVATE_KEY_PASSPHRASE') }}"
+      #private_key_passphrase: Excel
   target: dev
