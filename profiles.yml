@@ -27,8 +27,8 @@ data_demo:
       type: snowflake
       user: DBT_USER #DAVIDDATA
       warehouse: COMPUTE_WH
-      #private_key:
-      private_key_path: ./rsa_key.p8
+      private_key: "{{ env_var('SNOWFLAKE_PRIVATE_KEY') }}" 
+      #private_key_path: ./rsa_key.p8
       authenticator: username_password_mfa
       private_key_passphrase: Excel
   target: dev
