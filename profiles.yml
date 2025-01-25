@@ -13,21 +13,3 @@ data_demo:
       private_key_passphrase: "{{ env_var('SNOWFLAKE_PRIVATE_KEY_PASSPHRASE') }}"
       authenticator: username_password_mfa
   target: dev
-
-data_demo222:
-  outputs:
-    dev:
-      account: ucaiuph-dw03553
-      database: TRANSFORMATION
-      #password: Gr3@tgr@c3
-      role: ACCOUNTADMIN
-      schema: DBT_UDAVIDDDATA
-      threads: 6
-      type: snowflake
-      user: DAVIDDATA
-      warehouse: COMPUTE_WH
-      private_key: "{{ env_var('SNOWFLAKE_PRIVATE_KEY') }}" 
-      authenticator: username_password_mfa
-      private_key_passphrase: "{{ env_var('SNOWFLAKE_PRIVATE_KEY_PASSPHRASE') }}"
-      #private_key_passphrase: Excel
-  target: dev
