@@ -1,9 +1,8 @@
-data_demo222:
+data_demo:
   outputs:
     dev:
       account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}" 
       database: "{{ env_var('SNOWFLAKE_DB') }}" 
-      password: "{{ env_var('SNOWFLAKE_PASSWORD') }}" 
       role: "{{ env_var('SNOWFLAKE_ROLE') }}"
       schema: DBT_UDAVIDDDATA
       threads: 6
@@ -15,7 +14,7 @@ data_demo222:
       authenticator: username_password_mfa
   target: dev
 
-data_demo:
+data_demo222:
   outputs:
     dev:
       account: ucaiuph-dw03553
