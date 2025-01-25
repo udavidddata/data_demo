@@ -21,11 +21,11 @@ data_demo:
       account: ucaiuph-dw03553
       database: TRANSFORMATION
       #password: Gr3@tgr@c3
-      role: TRANSFORMER #ACCOUNTADMIN
+      role: ACCOUNTADMIN
       schema: DBT_UDAVIDDDATA
       threads: 6
       type: snowflake
-      user: DBT_USER #DAVIDDATA
+      user: DAVIDDATA
       warehouse: COMPUTE_WH
       private_key: "{{ env_var('SNOWFLAKE_PRIVATE_KEY') }}" 
       #private_key_path: ./rsa_key.p8
