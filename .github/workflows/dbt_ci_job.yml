@@ -25,6 +25,12 @@ jobs:
       SNOWFLAKE_PRIVATE_KEY_PASSPHRASE: ${{ secrets.SNOWFLAKE_PRIVATE_KEY_PASSPHRASE }}
 
     steps:
+      - name: Setup Snowflake key
+        run: |
+          mkdir -p ~/.dbt
+          echo "${{ secrets.SNOWFLAKE_PRIVATE_KEY }}" > ~/.dbt/snowflake.key
+          chmod 600 ~/.dbt/snowflake.key
+          
       - name: Checkout Code
         uses: actions/checkout@v2
 
