@@ -10,6 +10,6 @@ data_demo:
       type: snowflake
       user: "{{ env_var('SNOWFLAKE_USER') }}" 
       warehouse: COMPUTE_WH
-      private_key_path: ~/.dbt/snowflake.key
+      private_key_path: "~/.dbt/snowflake.key"
       private_key_passphrase: "{{ env_var('SNOWFLAKE_PRIVATE_KEY_PASSPHRASE') }}"
   target: dev
