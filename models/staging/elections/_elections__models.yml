@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: stg_elections__candidates
+    columns:
+      - name: candidate_id
+        tests: 
+          - unique
+          - not_null

@@ -1,4 +1,4 @@
-with 
+with
 
 source as (
 
@@ -12,7 +12,6 @@ renamed as (
         party_full,
         candidate_id,
         committee_ids,
-        split_part(candidate_name, ',', 1) as first_name,
         candidate_name,
         cast(total_receipts as float) as total_receipts,
         candidate_pcc_id,
@@ -20,8 +19,10 @@ renamed as (
         cast(total_disbursements as float) as total_disbursements,
         candidate_election_year,
         cast(cash_on_hand_end_period as float) as cash_on_hand_end_period,
-        incumbent_challenge_full
+        incumbent_challenge_full,
+        split_part(candidate_name, ',', 1) as candidate_first_name
     from source
 
 )
+
 select * from renamed

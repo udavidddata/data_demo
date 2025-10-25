@@ -1,4 +1,4 @@
-with 
+with
 
 source as (
 
@@ -17,10 +17,10 @@ renamed as (
         cmte_id,
         candidate_id,
         committee_id,
-        split_part(candidate_name, ',', 1) as first_name,
         candidate_name,
         committee_name,
-        support_oppose_indicator
+        support_oppose_indicator,
+        split_part(candidate_name, ',', 1) as candidate_first_name
 
     from source
 
